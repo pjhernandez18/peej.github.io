@@ -54,8 +54,13 @@
 							<article id="work">
 								<h2 class="major">Projects</h2>
 								<h3>USC's The Supper Club</h3>
-								<p>A few of my college friends and I founded USC's very first food club. <a href="http://thesupperclubsc.com">thesupperclubsc.com</a> serves as a platform for current members to engage with the club's mission and activities. Check out my GitHub for the code!</p>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>A few of my college friends and I founded USC's very first food club. Our mission was to create an inclusive group of like-minded people to explore LA's food scene. <a href="http://thesupperclubsc.com">thesupperclubsc.com</a> serves as a platform for current members to engage with the club's mission and activities. Member can see upcoming events, sign up for activities, and engage with our club. The site was built with Paper Kit 2.0, a Bootstrap UI Kit that gave the frontend a 'foodie' club feel. Check out my GitHub for the code.</p>
+								<span><img class="img-project" src="images/projects/thesupperclub.jpg" alt="" /></span>
+								<br>
+								<br>
+								<h3>Track Changes</h3>
+								<p>My first attempt on making a mobile app was a group effor called Track Changes. A music-streaming app with more interactive social features inspired by apps like Instagram. Our team wanted to focus on building a social community around today's music streaming apps - something we saw was lacking in apps like Apple Music and Spotify.</p>
+								<span><img class="img-project" src="images/projects/trackchanges.gif" alt="" /></span>
 								
 							</article>
 
@@ -342,7 +347,52 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</div>
 
 		<!-- BG -->
-			<div id="bg"></div>
+			<div id="bg">
+				<script type="text/javascript">
+					var UID = {
+						_current: 0,
+						getNew: function(){
+							this._current++;
+							return this._current;
+						}
+					};
+
+					HTMLElement.prototype.pseudoStyle = function(element,prop,value){
+						var _this = this;
+						var _sheetId = "pseudoStyles";
+						var _head = document.head || document.getElementsByTagName('head')[0];
+						var _sheet = document.getElementById(_sheetId) || document.createElement('style');
+						_sheet.id = _sheetId;
+						var className = "pseudoStyle" + UID.getNew();
+						
+						_this.className +=  " "+className; 
+						
+						_sheet.innerHTML += "\n."+className+":"+element+"{"+prop+":"+value+"}";
+						_head.appendChild(_sheet);
+						return this;
+					};
+					var images = [
+					"images/manila.jpg",
+					"images/palawan.jpg",
+					"images/singapore.jpg",
+					"images/la.jpg",
+					"images/santamonica.jpg"
+					]
+					var background = document.getElementById("bg");
+					var i = 0; 
+					setInterval(function() {
+						$('#bg').fadeOut("slow", function(){
+						background.pseudoStyle("after","background-image","url('" + images[i] + "')");
+							i = i + 1; 
+							if(i == images.length){
+								i = 0; 
+							}
+							$('#bg').fadeIn("slow")
+						}
+						);
+					}, 5000);
+				</script>
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
