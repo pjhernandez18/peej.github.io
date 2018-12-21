@@ -1098,9 +1098,12 @@ input, select, textarea {
 		width: 100%;
 		height: 100vh;
 		z-index: 1;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
-		#bg:before, #bg:after {
+		#bg:before, #bg:after{
 			content: '';
 			display: block;
 			position: absolute;
@@ -1141,8 +1144,7 @@ input, select, textarea {
 			z-index: 1;
 		}
 
-
-		body.is-article-visible #bg:after {
+		body.is-article-visible #bg:after{
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
@@ -1154,7 +1156,7 @@ input, select, textarea {
 		}
 
 		body.is-preload #bg:before {
-			background-color: #000000;
+			background-image: #ffffff;
 		}
 
  
