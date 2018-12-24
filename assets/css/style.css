@@ -14,3 +14,12 @@ img.img-project{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+img.img-gif{
+	height: 50%;
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
