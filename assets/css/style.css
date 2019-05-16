@@ -1,15 +1,12 @@
-.image.main{
-	height: 50%;
-	width: 50%;
-	display: block;
-	border-radius: 50%;
-	margin-left: auto;
-	margin-right: auto;
+img {
+	border-radius: 12px;
 }
 
 img.img-project{
 	height: 70%;
-	width: 70%;
+	width: 100%;
+	padding-left: 5px;
+	padding-right: 5px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -22,4 +19,19 @@ img.img-gif{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.row {
+	display: flex;
+  }
+  
+.column {
+	flex: 25%;
+	padding: 5px;
+}
+  
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	height: 100%;
+} */
 
