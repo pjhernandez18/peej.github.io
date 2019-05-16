@@ -1,6 +1,15 @@
+.image.main{
+	height: 50%;
+	width: 50%;
+	display: block;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
 img {
 	border-radius: 12px;
 }
+
 
 img.img-project{
 	height: 70%;
@@ -11,7 +20,7 @@ img.img-project{
 	margin-left: auto;
 	margin-right: auto;
 }
-
+im
 img.img-gif{
 	height: 50%;
 	width: 50%;
